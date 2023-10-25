@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    max-width: 1500px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 1rem;
+    z-index: 999;
+}
+
+header.navbar-container .logo img {
+    width: 250px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3rem 2rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #425c77;
+    color: white;
+}
+
+main {
+    max-width: 1500px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+    background-color: #96bce4;
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.card h2 {
+    position: relative;
+}
+
+
+.card h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+aside {
+    border: 2px solid #000000;
+    background-color: #425c77;
+    padding: 30px;
+    height: 700px
+}
+
+aside .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+aside .profile figure img {
+    border: 2px solid #000000;
+    max-width: 75%;
+    height: auto;
+    width: 200px;
+}
+
+
+aside .profile section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+aside .profile section table th {
+    text-align: left;
+    padding: 8px 12px;
+}
+
+aside .profile section table td {
+    padding: 8px 12px;
+}
+
+
+aside .profile section h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.content-image {
+    padding: 10px;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.content-description {
+    flex: 2;
+    padding: 10px;
+}
+
+
+
+.card table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.card th, .card td {
+    border: 2px solid #0c0c0c;
+    padding: 8px;
+    text-align: left;
+}
+
+.card tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: #0a0a0a;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive Media Queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    header.navbar-container .nav-list ul {
+        gap: 1.5rem;
+    }
+
+    aside {
+        padding: 20px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    main .content {
+        gap: 5px; 
+    }
+}
